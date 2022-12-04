@@ -1,0 +1,33 @@
+mixin nav(theme, url="#")
+    li.nav__item
+        if theme == "dark"
+            a(class="nav__link active nav__link_" + theme, href="../../pages/main/") About the shelter
+        else 
+            a(class="nav__link nav__link_" + theme, href="../../pages/main/") About the shelter
+    li.nav__item
+        if theme == "light"
+            a(class="nav__link active nav__link_" + theme, href="../../pages/pets/") Our pets
+        else 
+            a(class="nav__link nav__link_" + theme, href="../../pages/pets/") Our pets  
+    li.nav__item
+        if theme == "light"
+            a(class="nav__link nav__link_" + theme, href="../../pages/main/index.html#help") Help the shelter
+        else
+            a(class="nav__link nav__link_" + theme, href="../../pages/main/#help") Help the shelter
+    li.nav__item
+        a(class="nav__link nav__link_" + theme, href="#contact") Contacts
+
+mixin header(theme, url="#")
+    header.header
+        a.header__logo(href=url) 
+            h1.header__title(class="header__title_" + theme) Cozy House 
+            p.header__subtitle(class="header__subtitle_" + theme) Shelter for pets in Boston   
+        nav.header__nav 
+            ul.nav__list
+                +nav(theme, url="#") 
+            .nav__overlay
+            ul(class="nav__toggle nav__toggle_" + theme)
+                +nav(theme, url="#")
+            div(class="nav__burger nav__burger_" + theme)
+                div(class="nav__lines nav__lines_" + theme)    
+                 

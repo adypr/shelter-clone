@@ -1,0 +1,20 @@
+section.friends-short#friends
+    .container 
+        .friends-short__container 
+            h3.friends-short__title Our friends who <br>are looking for a house
+            .friends-short__list
+                .friends-short__arrow 
+                    +roundButton(null, "images/svg/arrow.svg", "light")
+                .friends-short__content
+                    .friends-short__wrapper 
+                        .friends-short__carousel 
+                            .friends-short__items#friends-short__items_left 
+                                +cardList(0, 1, 2)
+                            .friends-short__items#friends-short__items_active 
+                                +cardList(3, 4, 5)
+                            .friends-short__items#friends-short__items_right 
+                                +cardList(6, 2, 7)
+                .friends-short__arrow 
+                    +roundButton(null, "images/svg/arrow.svg", "light")
+            .friends-short__button 
+                +bigButton("Get to know the rest", "dark", "../../pages/pets/")

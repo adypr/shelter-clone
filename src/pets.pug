@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+  include blocks/head/_head.pug
+  
+  body
+    include blocks/buttons/_buttons
+    include blocks/card/_card
+    include blocks/header/_header
+    .header__container 
+      .container
+        +header("light", "../../pages/main/")
+    main 
+      include blocks/friends-full/_friends-full
+    include blocks/footer/_footer

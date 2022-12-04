@@ -1,0 +1,151 @@
+.donation {
+  background-color: $color-light-l;
+
+  &__container {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: $medium) {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 14px;
+      gap: 50px;
+    }
+
+    @media (max-width: $small) {
+      gap: 40px;
+    }
+  }
+
+  &__image {
+    width: 45.4%;
+    height: 282px;
+
+    background-image: url("../../images/img/donation-dog.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    @media (max-width: $medium) {
+      min-width: 505px;
+    }
+
+    @media (max-width: $small) {
+      width: 100%;
+      min-width: auto;
+      height: 42.255vw;
+
+      background-position: center;
+      background-size: 87.4%;
+    }
+  }
+
+  &__description {
+    width: 35%;
+
+    @media (max-width: $medium) {
+      width: fit-content;
+    }
+  }
+
+  &__card {
+    width: fit-content;
+    margin-bottom: 21px;
+    padding: 10px 15px 10px 60px;
+
+    font-size: 20px;
+
+    background-color: $color-primary;
+    background-image: url("../../images/svg/credit-card.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    border-radius: 9px;
+
+    @media (max-width: $small) {
+      margin-right: auto;
+      margin-left: auto;
+      padding: 10px 15px 10px 60px;
+
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    @extend .button;
+  }
+
+  &__number {
+    color: $color-dark-l;
+
+    @media (max-width: $small) {
+      font-size: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    padding-top: 1px;
+
+    line-height: 45px;
+
+    @media (max-width: $small) {
+      margin-bottom: 26px;
+
+      line-height: 32px;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 23px;
+
+    line-height: 11px;
+
+    color: $color-dark-l;
+
+    @media (max-width: $medium) {
+      margin-bottom: 23px;
+    }
+
+    @media (max-width: $small) {
+      margin-bottom: 26px;
+
+      text-align: center;
+      letter-spacing: 0;
+    }
+  }
+
+  &__text {
+    padding-right: 40px;
+
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Arial Italic", Arial, sans-serif;
+    color: $color-dark-m;
+
+    @media (max-width: $medium) {
+      width: 380px;
+      padding-right: 0;
+    }
+
+    @media (max-width: $small) {
+      width: auto;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      text-align: justify;
+    }
+  }
+
+  @media (max-width: $medium) {
+    padding-bottom: 89px;
+  }
+
+  @media (max-width: $small) {
+    padding-top: 27px;
+    padding-bottom: 43px;
+  }
+
+  @extend %padding;
+}

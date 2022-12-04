@@ -1,0 +1,75 @@
+.button {
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+
+  line-height: 22px;
+  font-family: Georgia, serif;
+  color: $color-dark-3xl;
+  letter-spacing: 0.06em;
+
+  background-color: $color-primary;
+  border-radius: 100px;
+
+  transition: 0.3s ease;
+
+  a {
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+    border-color: $color-primary-light;
+    cursor: pointer;
+  }
+
+  &_big {
+    padding: 15px 45px;
+  }
+
+  &_round {
+    width: 52px;
+    height: 52px;
+
+    font-size: 20px;
+  }
+
+  &_dark {
+    color: $color-dark-3xl;
+
+    background-color: $color-primary;
+  }
+
+  &_light {
+    background-color: transparent;
+    border: 2px solid $color-primary;
+  }
+
+  &_disabled {
+    color: $color-dark-s;
+
+    background-color: transparent;
+    border: 2px solid $color-dark-s;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $color-dark-s;
+      cursor: default;
+    }
+  }
+}
+
+.button_round.button_dark:hover {
+  color: $color-dark-3xl;
+
+  background-color: $color-primary;
+  cursor: default;
+}
+
+.hover {
+  background-color: $color-primary-light;
+  border-color: $color-primary-light;
+  cursor: pointer;
+}

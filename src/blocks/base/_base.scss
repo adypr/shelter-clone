@@ -1,0 +1,243 @@
+// Colors
+$color-light-s: #fafafa;
+$color-light-l: #f6f6f6;
+$color-light-xl: #ffffff;
+$color-dark-s: #cdcdcd;
+$color-dark-m: #b2b2b2;
+$color-dark-l: #545454;
+$color-dark-xl: #4c4c4c;
+$color-dark-3xl: #292929;
+$color-dark-4xl: #000000;
+$color-primary: #f1cdb3;
+$color-primary-light: #fddcc4;
+
+// Breakpoints
+$small: 767.98px;
+$medium: 1279.98px;
+
+// Fonts
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Georgia Regular";
+  src:
+    local("Georgia Regular"),
+    url("../../fonts/georgia.woff") format("woff"),
+    url("../../fonts/georgia.ttf") format("ttf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Georgia Italic";
+  src:
+    local("Georgia Italic"),
+    url("../../fonts/georgiai.woff") format("woff"),
+    url("../../fonts/georgiai.ttf") format("ttf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Arial Regular";
+  src:
+    local("Arial Regular"),
+    url("../../fonts/arial.woff") format("woff"),
+    url("../../fonts/arial.ttf") format("ttf");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Arial Italic";
+  src:
+    local("Arial Italic"),
+    url("../../fonts/ariali.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+
+  font-family: "Georgia Regular", Georgia, serif;
+
+  transition: all 0.3s ease;
+
+  &.open {
+    overflow: hidden;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a[href="#"] {
+  pointer-events: none;
+}
+
+button {
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background: none;
+  border: none;
+  outline: inherit;
+}
+
+h1 {
+  font-size: 32px;
+
+  line-height: 35px;
+
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  font-size: 44px;
+  line-height: 57px;
+
+  @media (max-width: $small) {
+    font-size: 25px;
+    line-height: 32.5px;
+    letter-spacing: 0.06em;
+  }
+}
+
+h3 {
+  font-size: 35px;
+  line-height: 45.5px;
+
+  color: $color-dark-l;
+  letter-spacing: 0.06em;
+
+  @media (max-width: $small) {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 23px;
+  color: $color-dark-l;
+  letter-spacing: 0.06em;
+
+  @media (max-width: $small) {
+    font-size: 20px;
+    line-height: 22.72px;
+  }
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+p {
+  line-height: 24px;
+  font-family: "Arial Regular", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: $medium) {
+    max-width: calc(100% - 60px);
+  }
+
+  @media (max-width: $small) {
+    max-width: calc(100% - 20px);
+  }
+}
+
+.overlay {
+  position: fixed;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgb(41 41 41 / 60%);
+}
+
+.d-none {
+  display: none;
+}
+
+// Mixins, extends
+
+%padding {
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  @media (max-width: $medium) {
+    padding-top: 66px;
+    padding-bottom: 99px;
+  }
+}
+
+%centerer {
+  max-width: 480px;
+  margin-bottom: 60px;
+
+  text-align: center;
+}
+
+%flex-centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%custom-scroll {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px $color-dark-s;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-primary;
+    border-radius: 9px;
+  }
+}

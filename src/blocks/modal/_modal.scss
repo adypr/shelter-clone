@@ -1,0 +1,169 @@
+.modal {
+  &__overlay {
+    z-index: 100;
+
+    @extend %flex-centerer;
+    @extend .overlay;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 110;
+
+    width: min(900px, 85%);
+    height: 500px;
+
+    background-color: $color-light-s;
+    border-radius: 9px;
+
+    @extend %flex-centerer;
+
+    @media (max-width: $medium) {
+      width: min(630px, 90%);
+      height: 350px;
+    }
+
+    @media (max-width: $small) {
+      flex-direction: column;
+      width: min(240px, 95%);
+      height: 341px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+
+    .button {
+      @extend %flex-centerer;
+    }
+
+    @media (max-width: $small) {
+      right: -33px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    @media (max-width: $medium) {
+      gap: 11px;
+    }
+  }
+
+  &__picture {
+    align-self: center;
+    width: 50%;
+    height: 100%;
+
+    @media (max-width: $small) {
+      display: none;
+    }
+
+    @extend %flex-centerer;
+  }
+
+  &__img {
+    width: 85%;
+
+    object-fit: contain;
+
+    @media (max-width: $medium) {
+      width: 100%;
+      height: 55%;
+    }
+  }
+
+  &__description {
+    width: 40%;
+    padding-right: 20px;
+
+    color: $color-dark-4xl;
+
+    @media (max-width: $medium) {
+      padding-right: 10px;
+    }
+
+    @media (max-width: $small) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    color: $color-dark-4xl;
+
+    @media (max-width: $medium) {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: $small) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+
+    color: $color-dark-4xl;
+
+    @media (max-width: $medium) {
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: $small) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    line-height: 16.5px;
+    font-family: "Georgia Regular", Georgia, serif;
+    letter-spacing: 6%;
+
+    @media (max-width: $medium) {
+      margin-bottom: 15px;
+
+      font-size: 13px;
+    }
+
+    @media (max-width: $small) {
+      text-align: justify;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: block;
+    margin-bottom: 11px;
+    padding-left: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+
+      display: block;
+      width: 4px;
+      height: 4px;
+
+      background-color: $color-primary;
+      border-radius: 50%;
+
+      border-radius: 50%;
+    }
+
+    @media (max-width: $medium) {
+      margin-bottom: 6px;
+    }
+  }
+}

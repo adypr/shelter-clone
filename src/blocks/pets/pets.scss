@@ -1,0 +1,22 @@
+@import "../base/base";
+@import "../buttons/buttons";
+@import "../card/card";
+@import "../header/header";
+@import "../friends-full/friends-full";
+@import "../footer/footer";
+
+.header {
+  &__container .header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.header__container {
+  position: fixed;
+  z-index: 100;
+
+  width: 100%;
+
+  background-color: $color-light-xl;
+}

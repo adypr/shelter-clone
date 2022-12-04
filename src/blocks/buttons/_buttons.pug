@@ -1,0 +1,13 @@
+mixin bigButton(text, type="dark", href="#")
+    button(class="button button_big button_"+type)
+        a(href=href) #{text}
+
+
+mixin roundButton(text, source, type='dark')
+    if text
+        button(class="button button_round button_"+type) #{text}
+    else if source
+        button(class="button button_round button_"+type)
+            img(src=source)
+
+

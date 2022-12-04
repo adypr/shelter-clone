@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  height: 435px;
+  padding-bottom: 32px;
+  overflow: hidden;
+
+  background-color: $color-light-s;
+
+  border-radius: 9px;
+
+  &:hover {
+    background-color: $color-light-xl;
+    box-shadow: 0 2px 35px 14px rgb(13 13 13 / 4%);
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    .button {
+      background-color: $color-primary-light;
+      border-color: $color-primary-light;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+
+    color: $color-dark-l;
+  }
+
+  .button {
+    padding-right: 43px;
+    padding-left: 43px;
+
+    line-height: 17px;
+  }
+}

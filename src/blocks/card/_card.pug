@@ -1,0 +1,25 @@
+-
+ var pets = [{id: 4, name: "Katrine", image: "images/img/pets-katrine.jpg"},
+            {id: 0, name: "Jennifer", image: "images/img/pets-jennifer.jpg"},
+            {id: 2, name: "Woody", image: "images/img/pets-woody.jpg"},
+            {id: 1, name: "Sophia", image: "images/img/pets-sophia.jpg"},
+            {id: 5, name: "Timmy", image: "images/img/pets-timmy.jpg"},
+            {id: 7, name: "Charly", image: "images/img/pets-charly.jpg"},
+            {id: 3, name: "Scarlett", image: "images/img/pets-scarlet.jpg"},
+            {id: 6, name: "Freddie", image: "images/img/pets-freddi.jpg"}
+            ];
+
+
+
+mixin card(num)
+    .card(data-id=pets[num].id)
+        .card__image 
+            img(src=pets[num].image)
+        h4.card__title= pets[num].name
+        .card__button 
+            +bigButton("Learn more", "light")
+
+
+mixin cardList(...nums)
+    each num in nums 
+        +card(num)

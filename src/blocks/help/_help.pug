@@ -1,0 +1,22 @@
+-
+ var helpItems = [{item: "Pet food", image: "images/svg/help.svg#food"},
+                    {item: "Transportation", image: "images/svg/help.svg#transportation"},
+                 {item: "Toys", image: "images/svg/help.svg#toys"},
+                 {item: "Bowls and cups", image: "images/svg/help.svg#bowls"},
+                 {item: "Shampoos", image: "images/svg/help.svg#shampoos"},
+                 {item: "Vitamins", image: "images/svg/help.svg#vitamins"},
+                 {item: "Medicines", image: "images/svg/help.svg#medicines"},
+                 {item: "Collars / leashes", image: "images/svg/help.svg#collars"},
+                 {item: "Sleeping areas", image: "images/svg/help.svg#sleeping"}];
+
+section.help#help 
+    .container 
+        .help__container 
+            h3.help__title How you can help<br> our shelter
+            .help__items
+                each item in helpItems
+                    .help__item
+                        svg.help__image
+                            use(xlink:href=item.image)
+                        h4.help__item-title=item.item
+                        

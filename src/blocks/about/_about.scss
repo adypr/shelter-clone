@@ -1,0 +1,91 @@
+.about {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 122px;
+
+    @media (max-width: $medium) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 80px;
+    }
+
+    @media (max-width: $small) {
+      gap: 18px;
+    }
+  }
+
+  &__image {
+    width: 39.5%;
+    height: 408px;
+
+    background-image: url("../../images/img/about-pets.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    @media (max-width: $medium) {
+      min-width: 300px;
+    }
+
+    @media (max-width: $small) {
+      width: 260px;
+      min-width: auto;
+      height: 354px;
+
+      background-size: cover;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    width: 35.1%;
+    padding-top: 14.5px;
+
+    gap: 24.5px;
+
+    @media (max-width: $medium) {
+      min-width: 430px;
+    }
+
+    @media (max-width: $small) {
+      display: block;
+      width: auto;
+      min-width: auto;
+    }
+  }
+
+  &__title {
+    width: 80%;
+
+    @media (max-width: $small) {
+      width: auto;
+      margin-bottom: 24px;
+
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+
+    color: $color-dark-xl;
+
+    @media (max-width: $small) {
+      margin-bottom: 22px;
+      padding-right: 15px;
+      padding-left: 15px;
+
+      text-align: justify;
+    }
+  }
+
+  @media (max-width: $small) {
+    padding-top: 28px;
+    padding-bottom: 43px;
+  }
+
+  @extend %padding;
+}

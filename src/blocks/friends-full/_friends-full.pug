@@ -1,0 +1,12 @@
+section.friends-full 
+    .container 
+        .friends-full__container
+            h3.friends-full__title Our friends who<br> are looking for a house
+            .friends-full__items 
+                +cardList(0, 1, 2, 3, 4, 5, 6, 7)
+            .friends-full__pagination 
+                +roundButton("<<", null, "disabled")
+                +roundButton("<", null, "disabled")
+                +roundButton("1", null)
+                +roundButton(">", null, "light")
+                +roundButton(">>", null, "light")
